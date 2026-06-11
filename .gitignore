@@ -1,15 +1,85 @@
+# ============================================================
+#  SoundSafe — .gitignore para proyecto Android + Kotlin
+# ============================================================
+
+# ------------------------------------------------------------
+# Gradle
+# ------------------------------------------------------------
+.gradle/
+build/
+app/build/
+**/build/
+
+# Gradle wrapper jar (se regenera con gradlew)
+!gradle/wrapper/gradle-wrapper.jar
+
+# ------------------------------------------------------------
+# Android Studio / IntelliJ IDEA
+# ------------------------------------------------------------
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.iws
+*.ipr
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# ------------------------------------------------------------
+# Configuración local (rutas específicas de cada PC)
+# ------------------------------------------------------------
 local.properties
+
+# ------------------------------------------------------------
+# Keystore y claves de firma (NUNCA subir al repositorio)
+# ------------------------------------------------------------
+*.jks
+*.keystore
+keystore.properties
+release-keystore.jks
+
+# ------------------------------------------------------------
+# Archivos de sistema operativo
+# ------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ------------------------------------------------------------
+# Archivos temporales y logs
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+captures/
+*.hprof
+
+# ------------------------------------------------------------
+# Kotlin / Java compilados
+# ------------------------------------------------------------
+*.class
+out/
+
+# ------------------------------------------------------------
+# Archivos de ProGuard generados
+# ------------------------------------------------------------
+**/mapping.txt
+**/seeds.txt
+**/usage.txt
+
+# ------------------------------------------------------------
+# Google Services (si usas Firebase — excluye la clave)
+# ------------------------------------------------------------
+google-services.json
