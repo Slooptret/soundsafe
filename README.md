@@ -15,6 +15,7 @@
 - [Objetivo de la aplicación](#-objetivo-de-la-aplicación)
 - [Historias de usuario MVP](#-historias-de-usuario-mvp)
 - [Tecnología utilizada](#-tecnología-utilizada)
+- [Funcionalidades implementadas](#-funcionalidades-implementadas)
 - [Instalación](#-instalación)
 - [Capturas de pantalla](#-capturas-de-pantalla)
 - [Estado actual del proyecto](#-estado-actual-del-proyecto)
@@ -94,7 +95,17 @@ View — Jetpack Compose (MonitoringFragment, HistoryFragment, SettingsFragment)
 | 🔴 Peligroso | +85 dB | Rojo |
 
 ---
+## ✅ Funcionalidades implementadas
 
+[#-funcionalidades-implementadas](#-funcionalidades-implementadas)
+
+- ✅ **Registro de usuario** — formulario con nombre, correo, contraseña y confirmación, validado antes de guardarse.
+- ✅ **Inicio de sesión** — verificación de credenciales contra la base de datos local (Room), con contraseñas protegidas mediante hash.
+- ✅ **Validaciones de formulario** — campos vacíos, formato de correo, longitud mínima de contraseña y coincidencia de confirmación, con mensajes de error específicos por campo.
+- ✅ **Persistencia local con Room** — entidad `Usuario`, DAO con inserción y búsqueda por correo, sin necesidad de conexión a internet.
+- ✅ **Navegación segura entre pantallas** — uso de flags de `Intent` para evitar que el usuario regrese al login tras autenticarse exitosamente.
+
+---
 ## ⚙️ Instalación
 
 ### Requisitos previos
